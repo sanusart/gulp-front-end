@@ -10,7 +10,7 @@ npm install
 
 ### Run
 
-`gulp` or `gulp --jade`
+`gulp --jade` or `gulp` (create _index.html_ in stead of _index.jade_)
 
 ### Misc
 
