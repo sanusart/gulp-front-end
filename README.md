@@ -22,7 +22,9 @@ npm install
 - **Output directory** is `dist`
 - **Add new files** to _css_files_ and _js_files_ array in `gulpfile.js` respectively
 - You can have **src/index.html** or **src/index.jade** (if you used _jade_ you need to run gulp with `--jade` switch e.g. `gulp --jade`)
+
 ## license
+
 MIT
 
 --------------------------------------------------------------------------------
