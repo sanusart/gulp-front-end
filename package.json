@@ -1,10 +1,10 @@
 {
   "name": "gulp-front-end",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gulp setup for front end website that use bower, browser sync, sass, minifies and concatenates.",
   "main": "index.html",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "./node_modules/.bin/bower install"
   },
   "repository": {
     "type": "git",

@@ -12,6 +12,14 @@ npm install
 
 `gulp --jade` or `gulp` (create _index.html_ in stead of _index.jade_)
 
+### options
+
+`gulp --min`  - minifies css, js and html
+
+`gulp --jade` - compiles _.jade_ files to html
+
+`gulp release --min` - prepare release, add `--bs` - to run with  browserSync
+
 ### Misc
 
 - **Bower** configured to install to `src/assets`

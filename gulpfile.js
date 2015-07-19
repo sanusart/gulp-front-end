@@ -63,6 +63,7 @@ if (args.jade) {
                 locals: YOUR_LOCALS,
                 pretty: true
             }))
+            .pipe(gulpif(args.min, minifyHtml()))
             .pipe(gulp.dest('dist/'))
             .pipe(browserSync.reload({stream: true}))
             .pipe(gulp.dest('src/'));
@@ -72,7 +73,8 @@ if (args.jade) {
         gulp.src([
             'src/*.html'
         ])
-            .pipe(gulp.dest('dist/'));
+        .pipe(gulpif(args.min, minifyHtml()))
+        .pipe(gulp.dest('dist/'));
         browserSync.reload();
     });
 }
