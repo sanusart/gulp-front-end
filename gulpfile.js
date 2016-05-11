@@ -59,31 +59,14 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('src/css'));
 });
 
-if (args.jade) {
-  gulp.task('html', function() {
-    var YOUR_LOCALS = {};
-    gulp.src('./src/*.jade')
-      .pipe(jade({
-        locals: YOUR_LOCALS,
-        pretty: true
-      }))
-      .pipe(gulpif(args.min, minifyHtml()))
-      .pipe(gulp.dest('dist/'))
-      .pipe(browserSync.reload({
-        stream: true
-      }))
-      .pipe(gulp.dest('src/'));
-  });
-} else {
-  gulp.task('html', function() {
-    gulp.src([
-        'src/*.html'
-      ])
-      .pipe(gulpif(args.min, minifyHtml()))
-      .pipe(gulp.dest('dist/'));
-    browserSync.reload();
-  });
-}
+gulp.task('html', function() {
+  gulp.src([
+      'src/*.html'
+    ])
+    .pipe(gulpif(args.min, minifyHtml()))
+    .pipe(gulp.dest('dist/'));
+  browserSync.reload();
+});
 
 gulp.task('fonts', function() {
   return gulp.src([
